@@ -14,6 +14,9 @@
 		148C14E61B022A9A006C2AD6 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 148C14E51B022A9A006C2AD6 /* Images.xcassets */; };
 		148C14E91B022A9A006C2AD6 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 148C14E71B022A9A006C2AD6 /* LaunchScreen.xib */; };
 		148C14F51B022A9A006C2AD6 /* CalculadoraAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 148C14F41B022A9A006C2AD6 /* CalculadoraAppTests.m */; };
+		149C33521B024B12003AD3CA /* ToastView.m in Sources */ = {isa = PBXBuildFile; fileRef = 149C33511B024B12003AD3CA /* ToastView.m */; };
+		149C33551B0259EA003AD3CA /* Calculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 149C33541B0259EA003AD3CA /* Calculator.m */; };
+		149C33571B027210003AD3CA /* CalculatorTestCase.m in Sources */ = {isa = PBXBuildFile; fileRef = 149C33561B027210003AD3CA /* CalculatorTestCase.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,11 @@
 		148C14EE1B022A9A006C2AD6 /* CalculadoraAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CalculadoraAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		148C14F31B022A9A006C2AD6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		148C14F41B022A9A006C2AD6 /* CalculadoraAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CalculadoraAppTests.m; sourceTree = "<group>"; };
+		149C33501B024B12003AD3CA /* ToastView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ToastView.h; sourceTree = "<group>"; };
+		149C33511B024B12003AD3CA /* ToastView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ToastView.m; sourceTree = "<group>"; };
+		149C33531B0259EA003AD3CA /* Calculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Calculator.h; sourceTree = "<group>"; };
+		149C33541B0259EA003AD3CA /* Calculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calculator.m; sourceTree = "<group>"; };
+		149C33561B027210003AD3CA /* CalculatorTestCase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorTestCase.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +97,11 @@
 				148C14E51B022A9A006C2AD6 /* Images.xcassets */,
 				148C14E71B022A9A006C2AD6 /* LaunchScreen.xib */,
 				148C14D81B022A9A006C2AD6 /* Supporting Files */,
+				149C33501B024B12003AD3CA /* ToastView.h */,
+				149C33511B024B12003AD3CA /* ToastView.m */,
+				149C33531B0259EA003AD3CA /* Calculator.h */,
+				149C33541B0259EA003AD3CA /* Calculator.m */,
+				149C33561B027210003AD3CA /* CalculatorTestCase.m */,
 			);
 			path = CalculadoraApp;
 			sourceTree = "<group>";
@@ -219,9 +232,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				149C33521B024B12003AD3CA /* ToastView.m in Sources */,
 				148C14E11B022A9A006C2AD6 /* ViewController.m in Sources */,
 				148C14DE1B022A9A006C2AD6 /* AppDelegate.m in Sources */,
 				148C14DB1B022A9A006C2AD6 /* main.m in Sources */,
+				149C33551B0259EA003AD3CA /* Calculator.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				148C14F51B022A9A006C2AD6 /* CalculadoraAppTests.m in Sources */,
+				149C33571B027210003AD3CA /* CalculatorTestCase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,6 +434,7 @@
 				148C14FA1B022A9A006C2AD6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		148C14FB1B022A9A006C2AD6 /* Build configuration list for PBXNativeTarget "CalculadoraAppTests" */ = {
 			isa = XCConfigurationList;
@@ -426,6 +443,7 @@
 				148C14FD1B022A9A006C2AD6 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
