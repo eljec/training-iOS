@@ -10,4 +10,24 @@
 
 @implementation Calculadora
 
+
+-(CGFloat) suma:(CGFloat) a mas:(CGFloat) b{
+    
+    return a + b;
+}
+
+-(CGFloat) resta:(CGFloat)a menos:(CGFloat)b{
+    
+    return a- b;
+}
+
+-(CGFloat) division:(CGFloat)a sobre:(CGFloat)b{
+    return a / b;
+}
+
+-(CGFloat) multiplicacion:(CGFloat)a por:(CGFloat)b{
+    
+    return a * b;
+}
+
 @end

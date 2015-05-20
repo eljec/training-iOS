@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		148390671AFD2CD800D98C56 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 148390661AFD2CD800D98C56 /* main.m */; };
+		148390751AFD468B00D98C56 /* Calculadora.m in Sources */ = {isa = PBXBuildFile; fileRef = 148390741AFD468B00D98C56 /* Calculadora.m */; };
+		1489E0481B00D50100E50847 /* CalculatorTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 1489E0471B00D50100E50847 /* CalculatorTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +27,9 @@
 /* Begin PBXFileReference section */
 		148390631AFD2CD800D98C56 /* Calculator */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Calculator; sourceTree = BUILT_PRODUCTS_DIR; };
 		148390661AFD2CD800D98C56 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		148390731AFD468B00D98C56 /* Calculadora.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Calculadora.h; sourceTree = "<group>"; };
+		148390741AFD468B00D98C56 /* Calculadora.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Calculadora.m; sourceTree = "<group>"; };
+		1489E0471B00D50100E50847 /* CalculatorTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalculatorTests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +63,9 @@
 			isa = PBXGroup;
 			children = (
 				148390661AFD2CD800D98C56 /* main.m */,
+				148390731AFD468B00D98C56 /* Calculadora.h */,
+				148390741AFD468B00D98C56 /* Calculadora.m */,
+				1489E0471B00D50100E50847 /* CalculatorTests.m */,
 			);
 			path = Calculator;
 			sourceTree = "<group>";
@@ -119,6 +127,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				148390671AFD2CD800D98C56 /* main.m in Sources */,
+				1489E0481B00D50100E50847 /* CalculatorTests.m in Sources */,
+				148390751AFD468B00D98C56 /* Calculadora.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,6 +245,7 @@
 				1483906C1AFD2CD800D98C56 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

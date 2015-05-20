@@ -7,7 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
-@interface PlayerCellView : NSObject
+@interface PlayerCellView : UITableViewCell
+
+
+@property (nonatomic, weak) IBOutlet UILabel *nameLabel;
+@property (nonatomic, weak) IBOutlet UILabel *gameLabel;
+@property (nonatomic, weak) IBOutlet UIImageView *ratingImageView;
+
 
 @end

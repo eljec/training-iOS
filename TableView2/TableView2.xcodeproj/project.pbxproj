@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		148AF33D1B0CCE5B0075E327 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 148AF33C1B0CCE5B0075E327 /* main.m */; };
 		148AF3401B0CCE5B0075E327 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 148AF33F1B0CCE5B0075E327 /* AppDelegate.m */; };
-		148AF3431B0CCE5B0075E327 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 148AF3421B0CCE5B0075E327 /* ViewController.m */; };
-		148AF3461B0CCE5B0075E327 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 148AF3441B0CCE5B0075E327 /* Main.storyboard */; };
 		148AF3481B0CCE5B0075E327 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 148AF3471B0CCE5B0075E327 /* Images.xcassets */; };
 		148AF34B1B0CCE5B0075E327 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 148AF3491B0CCE5B0075E327 /* LaunchScreen.xib */; };
 		148AF3571B0CCE5B0075E327 /* TableView2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 148AF3561B0CCE5B0075E327 /* TableView2Tests.m */; };
+		148AF3631B0CCEB10075E327 /* MyTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 148AF3611B0CCEB10075E327 /* MyTableViewController.m */; };
+		148AF3641B0CCEB10075E327 /* MyTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 148AF3621B0CCEB10075E327 /* MyTableViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +32,14 @@
 		148AF33C1B0CCE5B0075E327 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		148AF33E1B0CCE5B0075E327 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		148AF33F1B0CCE5B0075E327 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		148AF3411B0CCE5B0075E327 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		148AF3421B0CCE5B0075E327 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		148AF3451B0CCE5B0075E327 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		148AF3471B0CCE5B0075E327 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		148AF34A1B0CCE5B0075E327 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		148AF3501B0CCE5B0075E327 /* TableView2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TableView2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		148AF3551B0CCE5B0075E327 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		148AF3561B0CCE5B0075E327 /* TableView2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TableView2Tests.m; sourceTree = "<group>"; };
+		148AF3601B0CCEB10075E327 /* MyTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyTableViewController.h; sourceTree = "<group>"; };
+		148AF3611B0CCEB10075E327 /* MyTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewController.m; sourceTree = "<group>"; };
+		148AF3621B0CCEB10075E327 /* MyTableViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MyTableViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,12 +83,12 @@
 			children = (
 				148AF33E1B0CCE5B0075E327 /* AppDelegate.h */,
 				148AF33F1B0CCE5B0075E327 /* AppDelegate.m */,
-				148AF3411B0CCE5B0075E327 /* ViewController.h */,
-				148AF3421B0CCE5B0075E327 /* ViewController.m */,
-				148AF3441B0CCE5B0075E327 /* Main.storyboard */,
 				148AF3471B0CCE5B0075E327 /* Images.xcassets */,
 				148AF3491B0CCE5B0075E327 /* LaunchScreen.xib */,
 				148AF33A1B0CCE5B0075E327 /* Supporting Files */,
+				148AF3601B0CCEB10075E327 /* MyTableViewController.h */,
+				148AF3611B0CCEB10075E327 /* MyTableViewController.m */,
+				148AF3621B0CCEB10075E327 /* MyTableViewController.xib */,
 			);
 			path = TableView2;
 			sourceTree = "<group>";
@@ -199,8 +199,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				148AF3461B0CCE5B0075E327 /* Main.storyboard in Resources */,
 				148AF34B1B0CCE5B0075E327 /* LaunchScreen.xib in Resources */,
+				148AF3641B0CCEB10075E327 /* MyTableViewController.xib in Resources */,
 				148AF3481B0CCE5B0075E327 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,7 +219,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				148AF3431B0CCE5B0075E327 /* ViewController.m in Sources */,
+				148AF3631B0CCEB10075E327 /* MyTableViewController.m in Sources */,
 				148AF3401B0CCE5B0075E327 /* AppDelegate.m in Sources */,
 				148AF33D1B0CCE5B0075E327 /* main.m in Sources */,
 			);
@@ -244,14 +244,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		148AF3441B0CCE5B0075E327 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				148AF3451B0CCE5B0075E327 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		148AF3491B0CCE5B0075E327 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

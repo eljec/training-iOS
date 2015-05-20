@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>48545960-1DDE-4A75-9DBB-618300B80201</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>DemoApp</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>C4498754889668F77629D862177AFE932704508D</key>
 		<string>github.com:eljec/training-iOS.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>DemoApp/DemoApp.xcodeproj/project.xcworkspace</string>
+	<string>DemoApp/DemoApp.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>C4498754889668F77629D862177AFE932704508D</key>
