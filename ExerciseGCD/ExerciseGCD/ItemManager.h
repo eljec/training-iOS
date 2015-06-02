@@ -7,7 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Item.h"
 
 @interface ItemManager : NSObject
+
+@property NSString *itemSavedKey;
+
+- (Item *)generateNewItemWith:(NSString *)title price:(NSString *)price andImage:(UIImage *)image error:(NSError **)error;
+- (void)saveItem:(Item *)item;
+- (NSMutableArray *)getListOfItems;
+- (NSMutableArray *)getMockListOfItems:(NSNumber *)itemNunber;
+- (void)cleanAllItem;
 
 @end

@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JCMainViewController : UIViewController
+@interface JCMainViewController : UIViewController <UIActionSheetDelegate, UITableViewDataSource, UITableViewDelegate>
+@property (strong, nonatomic) IBOutlet UITableView *itemTable;
 
+- (void)openActionOptions;
 @end

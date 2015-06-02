@@ -9,11 +9,18 @@
 /* Begin PBXBuildFile section */
 		14CC6AE01B15EF850085E56C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CC6ADF1B15EF850085E56C /* main.m */; };
 		14CC6AE31B15EF850085E56C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CC6AE21B15EF850085E56C /* AppDelegate.m */; };
-		14CC6AE61B15EF850085E56C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CC6AE51B15EF850085E56C /* ViewController.m */; };
-		14CC6AE91B15EF850085E56C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 14CC6AE71B15EF850085E56C /* Main.storyboard */; };
 		14CC6AEB1B15EF850085E56C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 14CC6AEA1B15EF850085E56C /* Images.xcassets */; };
 		14CC6AEE1B15EF850085E56C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14CC6AEC1B15EF850085E56C /* LaunchScreen.xib */; };
 		14CC6AFA1B15EF860085E56C /* ExerciseGCDTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CC6AF91B15EF860085E56C /* ExerciseGCDTests.m */; };
+		14CC6B0D1B15F0410085E56C /* JCMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CC6B0B1B15F0410085E56C /* JCMainViewController.m */; };
+		14CC6B0E1B15F0410085E56C /* JCMainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14CC6B0C1B15F0410085E56C /* JCMainViewController.xib */; };
+		14CC6B121B1605D60085E56C /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CC6B111B1605D60085E56C /* MBProgressHUD.m */; };
+		14CC6B161B16183A0085E56C /* Item.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CC6B151B16183A0085E56C /* Item.m */; };
+		14CC6B211B1618DD0085E56C /* JCCreateItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CC6B1F1B1618DD0085E56C /* JCCreateItemViewController.m */; };
+		14CC6B221B1618DD0085E56C /* JCCreateItemViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14CC6B201B1618DD0085E56C /* JCCreateItemViewController.xib */; };
+		14CC6B271B16416D0085E56C /* ItemManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CC6B261B16416D0085E56C /* ItemManager.m */; };
+		14CC6B2B1B1660290085E56C /* ItemTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 14CC6B2A1B1660290085E56C /* ItemTableViewCell.xib */; };
+		14CC6B2E1B1660330085E56C /* ItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 14CC6B2D1B1660330085E56C /* ItemTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,14 +39,26 @@
 		14CC6ADF1B15EF850085E56C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		14CC6AE11B15EF850085E56C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		14CC6AE21B15EF850085E56C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		14CC6AE41B15EF850085E56C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		14CC6AE51B15EF850085E56C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		14CC6AE81B15EF850085E56C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		14CC6AEA1B15EF850085E56C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		14CC6AED1B15EF850085E56C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		14CC6AF31B15EF860085E56C /* ExerciseGCDTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ExerciseGCDTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		14CC6AF81B15EF860085E56C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		14CC6AF91B15EF860085E56C /* ExerciseGCDTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExerciseGCDTests.m; sourceTree = "<group>"; };
+		14CC6B0A1B15F0410085E56C /* JCMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCMainViewController.h; sourceTree = "<group>"; };
+		14CC6B0B1B15F0410085E56C /* JCMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCMainViewController.m; sourceTree = "<group>"; };
+		14CC6B0C1B15F0410085E56C /* JCMainViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JCMainViewController.xib; sourceTree = "<group>"; };
+		14CC6B101B1605D60085E56C /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		14CC6B111B1605D60085E56C /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		14CC6B141B16183A0085E56C /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
+		14CC6B151B16183A0085E56C /* Item.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Item.m; sourceTree = "<group>"; };
+		14CC6B1E1B1618DD0085E56C /* JCCreateItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCCreateItemViewController.h; sourceTree = "<group>"; };
+		14CC6B1F1B1618DD0085E56C /* JCCreateItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCCreateItemViewController.m; sourceTree = "<group>"; };
+		14CC6B201B1618DD0085E56C /* JCCreateItemViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = JCCreateItemViewController.xib; sourceTree = "<group>"; };
+		14CC6B251B16416D0085E56C /* ItemManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemManager.h; sourceTree = "<group>"; };
+		14CC6B261B16416D0085E56C /* ItemManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemManager.m; sourceTree = "<group>"; };
+		14CC6B2A1B1660290085E56C /* ItemTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemTableViewCell.xib; sourceTree = "<group>"; };
+		14CC6B2C1B1660330085E56C /* ItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ItemTableViewCell.h; sourceTree = "<group>"; };
+		14CC6B2D1B1660330085E56C /* ItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ItemTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,11 +100,10 @@
 		14CC6ADC1B15EF850085E56C /* ExerciseGCD */ = {
 			isa = PBXGroup;
 			children = (
-				14CC6AE11B15EF850085E56C /* AppDelegate.h */,
-				14CC6AE21B15EF850085E56C /* AppDelegate.m */,
-				14CC6AE41B15EF850085E56C /* ViewController.h */,
-				14CC6AE51B15EF850085E56C /* ViewController.m */,
-				14CC6AE71B15EF850085E56C /* Main.storyboard */,
+				14CC6B231B16413E0085E56C /* Model */,
+				14CC6B0F1B1605B00085E56C /* ProgressViewLib */,
+				14CC6B041B15EFD10085E56C /* View */,
+				14CC6B031B15EFBE0085E56C /* Delegate */,
 				14CC6AEA1B15EF850085E56C /* Images.xcassets */,
 				14CC6AEC1B15EF850085E56C /* LaunchScreen.xib */,
 				14CC6ADD1B15EF850085E56C /* Supporting Files */,
@@ -117,6 +135,91 @@
 				14CC6AF81B15EF860085E56C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		14CC6B031B15EFBE0085E56C /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				14CC6AE11B15EF850085E56C /* AppDelegate.h */,
+				14CC6AE21B15EF850085E56C /* AppDelegate.m */,
+			);
+			name = Delegate;
+			sourceTree = "<group>";
+		};
+		14CC6B041B15EFD10085E56C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				14CC6B291B165FFB0085E56C /* ItemTableView */,
+				14CC6B181B16189A0085E56C /* MainView */,
+				14CC6B171B1618860085E56C /* CreateItemView */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		14CC6B0F1B1605B00085E56C /* ProgressViewLib */ = {
+			isa = PBXGroup;
+			children = (
+				14CC6B101B1605D60085E56C /* MBProgressHUD.h */,
+				14CC6B111B1605D60085E56C /* MBProgressHUD.m */,
+			);
+			name = ProgressViewLib;
+			sourceTree = "<group>";
+		};
+		14CC6B131B1617AC0085E56C /* Item */ = {
+			isa = PBXGroup;
+			children = (
+				14CC6B141B16183A0085E56C /* Item.h */,
+				14CC6B151B16183A0085E56C /* Item.m */,
+			);
+			name = Item;
+			sourceTree = "<group>";
+		};
+		14CC6B171B1618860085E56C /* CreateItemView */ = {
+			isa = PBXGroup;
+			children = (
+				14CC6B1E1B1618DD0085E56C /* JCCreateItemViewController.h */,
+				14CC6B1F1B1618DD0085E56C /* JCCreateItemViewController.m */,
+				14CC6B201B1618DD0085E56C /* JCCreateItemViewController.xib */,
+			);
+			name = CreateItemView;
+			sourceTree = "<group>";
+		};
+		14CC6B181B16189A0085E56C /* MainView */ = {
+			isa = PBXGroup;
+			children = (
+				14CC6B0A1B15F0410085E56C /* JCMainViewController.h */,
+				14CC6B0B1B15F0410085E56C /* JCMainViewController.m */,
+				14CC6B0C1B15F0410085E56C /* JCMainViewController.xib */,
+			);
+			name = MainView;
+			sourceTree = "<group>";
+		};
+		14CC6B231B16413E0085E56C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				14CC6B241B1641460085E56C /* ItemManager */,
+				14CC6B131B1617AC0085E56C /* Item */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		14CC6B241B1641460085E56C /* ItemManager */ = {
+			isa = PBXGroup;
+			children = (
+				14CC6B251B16416D0085E56C /* ItemManager.h */,
+				14CC6B261B16416D0085E56C /* ItemManager.m */,
+			);
+			name = ItemManager;
+			sourceTree = "<group>";
+		};
+		14CC6B291B165FFB0085E56C /* ItemTableView */ = {
+			isa = PBXGroup;
+			children = (
+				14CC6B2C1B1660330085E56C /* ItemTableViewCell.h */,
+				14CC6B2D1B1660330085E56C /* ItemTableViewCell.m */,
+				14CC6B2A1B1660290085E56C /* ItemTableViewCell.xib */,
+			);
+			name = ItemTableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,8 +302,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14CC6AE91B15EF850085E56C /* Main.storyboard in Resources */,
 				14CC6AEE1B15EF850085E56C /* LaunchScreen.xib in Resources */,
+				14CC6B0E1B15F0410085E56C /* JCMainViewController.xib in Resources */,
+				14CC6B221B1618DD0085E56C /* JCCreateItemViewController.xib in Resources */,
+				14CC6B2B1B1660290085E56C /* ItemTableViewCell.xib in Resources */,
 				14CC6AEB1B15EF850085E56C /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -219,9 +324,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				14CC6AE61B15EF850085E56C /* ViewController.m in Sources */,
+				14CC6B2E1B1660330085E56C /* ItemTableViewCell.m in Sources */,
+				14CC6B271B16416D0085E56C /* ItemManager.m in Sources */,
+				14CC6B211B1618DD0085E56C /* JCCreateItemViewController.m in Sources */,
+				14CC6B161B16183A0085E56C /* Item.m in Sources */,
 				14CC6AE31B15EF850085E56C /* AppDelegate.m in Sources */,
+				14CC6B0D1B15F0410085E56C /* JCMainViewController.m in Sources */,
 				14CC6AE01B15EF850085E56C /* main.m in Sources */,
+				14CC6B121B1605D60085E56C /* MBProgressHUD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,14 +354,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		14CC6AE71B15EF850085E56C /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				14CC6AE81B15EF850085E56C /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		14CC6AEC1B15EF850085E56C /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (

@@ -1,11 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="JCCreateItemViewController">
             <connections>
+                <outlet property="itemImageView" destination="Eso-Wa-7YQ" id="aHs-oD-p7C"/>
+                <outlet property="priceTextView" destination="WiM-uP-692" id="EEi-aB-D4y"/>
+                <outlet property="titleTextView" destination="YQN-xw-j7b" id="CYf-Hk-aer"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -13,7 +16,98 @@
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QGd-Tl-Tdh">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <subviews>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YQN-xw-j7b">
+                            <rect key="frame" x="171" y="116" width="220" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits"/>
+                        </textField>
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Eso-Wa-7YQ">
+                            <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                            <color key="backgroundColor" red="1" green="0.87375278440000004" blue="0.66379377539999995" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="248" id="Alk-Jk-MV0"/>
+                                <constraint firstAttribute="width" constant="240" id="oUc-Ff-Tih"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="Alk-Jk-MV0"/>
+                                    <exclude reference="oUc-Ff-Tih"/>
+                                </mask>
+                            </variation>
+                            <variation key="widthClass=compact">
+                                <mask key="constraints">
+                                    <include reference="Alk-Jk-MV0"/>
+                                    <include reference="oUc-Ff-Tih"/>
+                                </mask>
+                            </variation>
+                        </imageView>
+                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Price" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WiM-uP-692">
+                            <rect key="frame" x="0.0" y="-30" width="97" height="30"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                        </textField>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Eso-Wa-7YQ" firstAttribute="leading" secondItem="QGd-Tl-Tdh" secondAttribute="leading" constant="80" id="5Su-hp-1tG"/>
+                        <constraint firstItem="YQN-xw-j7b" firstAttribute="trailing" secondItem="WiM-uP-692" secondAttribute="trailing" id="CkQ-ul-28D"/>
+                        <constraint firstItem="YQN-xw-j7b" firstAttribute="leading" secondItem="WiM-uP-692" secondAttribute="leading" id="Gix-FL-idl"/>
+                        <constraint firstItem="WiM-uP-692" firstAttribute="leading" secondItem="QGd-Tl-Tdh" secondAttribute="leading" constant="80" id="K6I-5o-50W"/>
+                        <constraint firstAttribute="trailing" secondItem="YQN-xw-j7b" secondAttribute="trailing" constant="80" id="K6l-vN-cPN"/>
+                        <constraint firstItem="WiM-uP-692" firstAttribute="top" secondItem="YQN-xw-j7b" secondAttribute="bottom" constant="63" id="RCL-rs-y4b"/>
+                        <constraint firstAttribute="bottom" secondItem="YQN-xw-j7b" secondAttribute="bottom" constant="454" id="bRB-Zk-EGF"/>
+                        <constraint firstItem="YQN-xw-j7b" firstAttribute="top" secondItem="QGd-Tl-Tdh" secondAttribute="top" constant="116" id="bbv-ZK-DUw"/>
+                        <constraint firstAttribute="centerX" secondItem="WiM-uP-692" secondAttribute="centerX" id="eh1-Ng-qzk"/>
+                        <constraint firstAttribute="bottom" secondItem="Eso-Wa-7YQ" secondAttribute="bottom" constant="48" id="xpl-D9-lwJ"/>
+                    </constraints>
+                    <variation key="default">
+                        <mask key="subviews">
+                            <exclude reference="Eso-Wa-7YQ"/>
+                            <exclude reference="WiM-uP-692"/>
+                        </mask>
+                        <mask key="constraints">
+                            <exclude reference="CkQ-ul-28D"/>
+                            <exclude reference="Gix-FL-idl"/>
+                            <exclude reference="K6l-vN-cPN"/>
+                            <exclude reference="bRB-Zk-EGF"/>
+                            <exclude reference="bbv-ZK-DUw"/>
+                            <exclude reference="K6I-5o-50W"/>
+                            <exclude reference="RCL-rs-y4b"/>
+                            <exclude reference="eh1-Ng-qzk"/>
+                            <exclude reference="5Su-hp-1tG"/>
+                            <exclude reference="xpl-D9-lwJ"/>
+                        </mask>
+                    </variation>
+                    <variation key="widthClass=compact">
+                        <mask key="subviews">
+                            <include reference="Eso-Wa-7YQ"/>
+                            <include reference="WiM-uP-692"/>
+                        </mask>
+                        <mask key="constraints">
+                            <include reference="CkQ-ul-28D"/>
+                            <include reference="Gix-FL-idl"/>
+                            <include reference="K6l-vN-cPN"/>
+                            <include reference="bRB-Zk-EGF"/>
+                            <include reference="bbv-ZK-DUw"/>
+                            <include reference="K6I-5o-50W"/>
+                            <include reference="RCL-rs-y4b"/>
+                            <include reference="eh1-Ng-qzk"/>
+                            <include reference="5Su-hp-1tG"/>
+                            <include reference="xpl-D9-lwJ"/>
+                        </mask>
+                    </variation>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="0.80784320831298828" green="0.88627457618713379" blue="0.94509810209274292" alpha="1" colorSpace="deviceRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="QGd-Tl-Tdh" secondAttribute="bottom" id="0VO-TB-myE"/>
+                <constraint firstAttribute="trailing" secondItem="QGd-Tl-Tdh" secondAttribute="trailing" id="NaR-jL-bQI"/>
+                <constraint firstItem="QGd-Tl-Tdh" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Oef-YN-tJO"/>
+                <constraint firstItem="QGd-Tl-Tdh" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ufw-5R-gbU"/>
+            </constraints>
         </view>
     </objects>
 </document>

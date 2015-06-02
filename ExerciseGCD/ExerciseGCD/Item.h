@@ -13,9 +13,7 @@
 
 
 @property (nonatomic, copy) NSString *title;
-@property (nonatomic, copy) NSString *subTitle;
 @property (nonatomic, strong) NSNumber *price;
-@property (nonatomic, copy) NSString *des;
 @property (nonatomic, strong) UIImage *image;
 
 

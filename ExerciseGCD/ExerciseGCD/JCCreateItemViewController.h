@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface JCCreateItemViewController : UIViewController
+@interface JCCreateItemViewController : UIViewController <UIImagePickerControllerDelegate, UINavigationControllerDelegate>
+
+@property (strong, nonatomic) IBOutlet UITextField *titleTextView;
+@property (strong, nonatomic) IBOutlet UITextField *priceTextView;
+@property (strong, nonatomic) IBOutlet UIImageView *itemImageView;
 
 @end
