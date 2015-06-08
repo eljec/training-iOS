@@ -24,7 +24,7 @@
 	self = [super initWithNibName:NSStringFromClass([self class])
 	                       bundle:[NSBundle mainBundle]];
 	if (self) {
-		self.title = @"Results";
+		//self.title = @"Results";
 		results = arrayItems;
 	}
 	return self;
