@@ -11,6 +11,7 @@
 #import "AlbumTableViewCell.h"
 #import "PhotoViewController.h"
 
+
 @interface JCAlbumViewController ()
 
 @end

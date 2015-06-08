@@ -14,6 +14,10 @@
 #import "MBProgressHUD.h"
 #import "PhotoDetailViewController.h"
 
+
+#import "AFNetworking.h"
+#import "UIImageView+AFNetworking.h"
+
 @interface PhotoViewController () {
 	NSMutableArray *data;
 	RequestManager *manager;
@@ -92,10 +96,27 @@
 
 	PhotoCollectionViewCell *cell = (PhotoCollectionViewCell *)[self.photoCollectionView dequeueReusableCellWithReuseIdentifier:MyIdentifier forIndexPath:indexPath];
 
-	UIImage *image = [[UIImage alloc] initWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:item.thumbnailUrl]]];
+//	UIImage *image = [[UIImage alloc] initWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:item.thumbnailUrl]]];
+//
+//	cell.photoTitle.text = item.title;
+//	cell.photoImageView.image = image;
+
+	//
 
 	cell.photoTitle.text = item.title;
-	cell.photoImageView.image = image;
+
+	NSURL *url = [NSURL URLWithString:item.thumbnailUrl];
+	NSURLRequest *request = [NSURLRequest requestWithURL:url];
+	UIImage *placeholderImage = [UIImage imageNamed:@"placeholder"];
+
+	__weak PhotoCollectionViewCell *weakCell = cell;
+
+	[cell.photoImageView setImageWithURLRequest:request
+	                           placeholderImage:placeholderImage
+	                                    success: ^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+	    weakCell.photoImageView.image = image;
+	    [weakCell setNeedsLayout];
+	} failure:nil];
 
 	return cell;
 }
