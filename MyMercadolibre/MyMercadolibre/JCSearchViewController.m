@@ -14,6 +14,7 @@
 @interface JCSearchViewController () {
 	RequestManager *manager;
 	MBProgressHUD *progressView;
+	NSString *searchText;
 }
 
 @end
@@ -34,25 +35,45 @@
 	[self.view addSubview:progressView];
 	progressView.delegate = self;
 	progressView.mode = MBProgressHUDModeIndeterminate;
+
+
+	// Set Toolbar
+
+	UIToolbar *toolbar = [[UIToolbar alloc] init];
+	[toolbar setBarStyle:UIBarStyleBlackTranslucent];
+	[toolbar sizeToFit];
+
+	UIBarButtonItem *doneButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self action:@selector(resignKeyboard)];
+
+	NSArray *itemsArray = [NSArray arrayWithObjects:doneButton, nil];
+
+	[toolbar setItems:itemsArray];
+
+	[self.searchTextView setInputAccessoryView:toolbar];
+
+
+	self.searchTextView.autocorrectionType = UITextAutocorrectionTypeNo;
+}
+
+- (void)resignKeyboard {
+	[self.searchTextView resignFirstResponder];
 }
 
 - (void)didReceiveMemoryWarning {
 	[super didReceiveMemoryWarning];
-	// Dispose of any resources that can be recreated.
 }
 
-/*
-   #pragma mark - Navigation
-
-   // In a storyboard-based application, you will often want to do a little preparation before navigation
-   - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-   }
- */
-
 - (IBAction)search:(id)sender {
-	if ([self.searchTextView.text isEqual:@""]) {
+	// Close the keyboard
+
+	[self.searchTextView resignFirstResponder];
+
+	// Check the text of the textView
+
+	searchText = self.searchTextView.text;
+
+
+	if ([searchText isEqual:@""]) {
 		// SHow erroe message
 
 		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Missing required data!" message:@"Please complete with all requiered information" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
@@ -68,7 +89,6 @@
 		[manager searchWith:searchString callBackBlock: ^(NSMutableArray *arrayResult) {
 		    // Load the result list
 
-
 		    [progressView hide:YES];
 
 		    [weakSelf showResults:arrayResult];
@@ -78,6 +98,7 @@
 
 - (void)showResults:(NSMutableArray *)results {
 	SearchResultViewController *resultsViewController = [[SearchResultViewController alloc] initWithArrayItems:results];
+	resultsViewController.title = [NSString stringWithFormat:@"Result of '%@'", searchText];
 
 	[self.navigationController pushViewController:resultsViewController
 	                                     animated:YES];
