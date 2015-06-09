@@ -16,11 +16,9 @@
 @interface DetailViewController : UIViewController <MBProgressHUDDelegate>
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 @property (strong, nonatomic) IBOutlet UILabel *priceLabel;
-@property (strong, nonatomic) IBOutlet UIImageView *itemImageView;
-
-@property (strong, nonatomic) IBOutlet MMScrollPresenter *viewPagerImage;
 
 @property MBProgressHUD *progressView;
+@property (strong, nonatomic) IBOutlet UIScrollView *pagerImages;
 
 @property NSMutableDictionary *arrayRequestUrl;
 

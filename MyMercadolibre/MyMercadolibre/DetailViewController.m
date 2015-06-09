@@ -58,62 +58,35 @@
 }
 
 - (void)populateView:(JCItemEntity *)item {
-//	UIImage *placeholder = [UIImage imageNamed:@"placeHolder"];
-//
-//	currentItem = item;
-//
-//	self.titleLabel.text = item.title;
-//	self.priceLabel.text = [NSString localizedStringWithFormat:@"$ %.2ld", (long)item.price];
-//	self.itemImageView.image = placeholder;
-//
-//	__weak typeof(self) weakSelf = self;
-//
-//	if (item.arrayPictures) {
-//		NSString *urlPicture = [item.arrayPictures objectAtIndex:0];
-//
-//		NSURL *url = [NSURL URLWithString:urlPicture];
-//
-//		NSURLRequest *request = [NSURLRequest requestWithURL:url];
-//		[self.itemImageView setImageWithURLRequest:request
-//		                          placeholderImage:placeholder
-//		                                   success: ^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
-//		    weakSelf.itemImageView.image = image;
-//
-//		    // Hide progress virew
-//		    [weakSelf.progressView hide:YES];
-//		} failure:nil];
-//	}
-
 	self.titleLabel.text = item.title;
 	self.priceLabel.text = [NSString localizedStringWithFormat:@"$ %.2ld", (long)item.price];
 
 	// Image
 
-	NSMutableArray *arrayPanelImages = [[NSMutableArray alloc] init];
-
-	[self.viewPagerImage setFrame:CGRectMake(0, 0, [[UIScreen mainScreen] bounds].size.width, self.viewPagerImage.frame.size.height)];
-
-
 	if (item.arrayPictures) {
+		self.pagerImages.contentSize = CGSizeMake(self.pagerImages.frame.size.width * item.arrayPictures.count, self.pagerImages.frame.size.height);
+
 		UIImage *placeholder = [UIImage imageNamed:@"placeHolder"];
 		__weak typeof(self) weakSelf = self;
 
+		int i = 0;
+
 		for (NSString *urlPicture in item.arrayPictures) {
-			UIImageView *mountainImage = [[UIImageView alloc] initWithImage:placeholder];
-			[mountainImage setFrame:CGRectMake(0, 0, self.viewPagerImage.frame.size.width, self.viewPagerImage.frame.size.height)];
+			UIImageView *itemImage = [[UIImageView alloc] initWithImage:placeholder];
+			[itemImage setFrame:CGRectMake(0, 0, self.pagerImages.frame.size.width, self.pagerImages.frame.size.height)];
 
 			// Adding to the array request url
 
-			[self.arrayRequestUrl setObject:mountainImage forKey:urlPicture];
+			[self.arrayRequestUrl setObject:itemImage forKey:urlPicture];
 
 			// Load view in bg
 
 			NSURL *url = [NSURL URLWithString:urlPicture];
 
 			NSURLRequest *request = [NSURLRequest requestWithURL:url];
-			[mountainImage setImageWithURLRequest:request
-			                     placeholderImage:placeholder
-			                              success: ^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+			[itemImage setImageWithURLRequest:request
+			                 placeholderImage:placeholder
+			                          success: ^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
 			    NSString *requestPath = [[request URL] absoluteString];
 			    UIImageView *aux = [weakSelf.arrayRequestUrl objectForKey:requestPath];
 			    aux.image = image;
@@ -122,16 +95,18 @@
 
 			// Create Panel
 
-			MMScrollPage *firstPage = [[MMScrollPage alloc] init];
-			firstPage.titleLabel.text = @"";
-			firstPage.detailLabel.text = @"";
-			[firstPage.backgroundView addSubview:mountainImage];
-			//firstPage.titleBackgroundColor = [UIColor colorWithRed:119 / 255.0f green:92 / 255.0f blue:166 / 255.0f alpha:0.5];
+			CGRect frame;
+			frame.origin.x = self.pagerImages.frame.size.width * i;
+			frame.origin.y = 0;
+			frame.size = self.pagerImages.frame.size;
 
-			[arrayPanelImages addObject:firstPage];
+			UIView *subview = [[UIView alloc] initWithFrame:frame];
+			[subview addSubview:itemImage];
+
+			[self.pagerImages addSubview:subview];
+
+			i++;
 		}
-
-		[self.viewPagerImage addMMScrollPageArray:arrayPanelImages];
 	}
 }
 
