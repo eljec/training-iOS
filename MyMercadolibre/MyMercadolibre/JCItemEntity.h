@@ -14,6 +14,7 @@
 @property NSString *title;
 @property NSInteger price;
 @property NSString *urlThumbnailImage;
+@property NSMutableArray *arrayPictures;
 
 
 - (id)initWithDataResponse:(NSDictionary *)dataResponse;

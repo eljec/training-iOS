@@ -15,5 +15,5 @@
 
 - (void)getSites:(void (^) (NSMutableArray *))callBackBlock;
 - (void)searchWith:(NSString *)text callBackBlock:(void (^)(NSMutableArray *))callBackBlock;
-
+- (void)getItemById:(NSString *)id callBackBlock:(void (^) (JCItemEntity *))callBackBlock;
 @end

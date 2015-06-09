@@ -14,6 +14,8 @@
 		147AE0A61B20E73800269A3E /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 147AE0A51B20E73800269A3E /* Images.xcassets */; };
 		147AE0A91B20E73800269A3E /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 147AE0A71B20E73800269A3E /* LaunchScreen.xib */; };
 		147AE0B51B20E73800269A3E /* MyMercadolibreTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 147AE0B41B20E73800269A3E /* MyMercadolibreTests.m */; };
+		148792D81B271C490018C395 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 148792D61B271C490018C395 /* DetailViewController.m */; };
+		148792D91B271C490018C395 /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 148792D71B271C490018C395 /* DetailViewController.xib */; };
 		14979BD21B21D38F00714368 /* JCSearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14979BD11B21D38F00714368 /* JCSearchViewController.m */; };
 		14979BD51B21D3AF00714368 /* JCCountryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14979BD41B21D3AF00714368 /* JCCountryViewController.m */; };
 		14979BDC1B21D53B00714368 /* SearchResultViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 14979BDA1B21D53B00714368 /* SearchResultViewController.m */; };
@@ -70,6 +72,9 @@
 		147AE0AE1B20E73800269A3E /* MyMercadolibreTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyMercadolibreTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		147AE0B31B20E73800269A3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		147AE0B41B20E73800269A3E /* MyMercadolibreTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MyMercadolibreTests.m; sourceTree = "<group>"; };
+		148792D51B271C490018C395 /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		148792D61B271C490018C395 /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		148792D71B271C490018C395 /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		14979BD01B21D38F00714368 /* JCSearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCSearchViewController.h; sourceTree = "<group>"; };
 		14979BD11B21D38F00714368 /* JCSearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCSearchViewController.m; sourceTree = "<group>"; };
 		14979BD31B21D3AF00714368 /* JCCountryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCCountryViewController.h; sourceTree = "<group>"; };
@@ -208,9 +213,20 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		148792D41B271C2D0018C395 /* DetailView */ = {
+			isa = PBXGroup;
+			children = (
+				148792D51B271C490018C395 /* DetailViewController.h */,
+				148792D61B271C490018C395 /* DetailViewController.m */,
+				148792D71B271C490018C395 /* DetailViewController.xib */,
+			);
+			name = DetailView;
+			sourceTree = "<group>";
+		};
 		14979BCD1B21D34200714368 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				148792D41B271C2D0018C395 /* DetailView */,
 				14979BDE1B21D80200714368 /* SerachResultCellView */,
 				14979BD81B21D4A700714368 /* SearchResultView */,
 				14979BCF1B21D35400714368 /* SearchView */,
@@ -455,6 +471,7 @@
 			files = (
 				147AE0A41B20E73800269A3E /* Main.storyboard in Resources */,
 				143F54911B262D4600A1F900 /* Localizable.strings in Resources */,
+				148792D91B271C490018C395 /* DetailViewController.xib in Resources */,
 				147AE0A91B20E73800269A3E /* LaunchScreen.xib in Resources */,
 				14979BE31B21D93300714368 /* JCSearchResultTableViewCell.xib in Resources */,
 				147AE0A61B20E73800269A3E /* Images.xcassets in Resources */,
@@ -499,6 +516,7 @@
 				14979C1B1B21DCED00714368 /* UIWebView+AFNetworking.m in Sources */,
 				14979C151B21DCED00714368 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
 				14979BFA1B21DCE100714368 /* AFHTTPRequestOperationManager.m in Sources */,
+				148792D81B271C490018C395 /* DetailViewController.m in Sources */,
 				14979C281B21E08C00714368 /* RequestManager.m in Sources */,
 				14979C1A1B21DCED00714368 /* UIRefreshControl+AFNetworking.m in Sources */,
 				14979BFD1B21DCE100714368 /* AFSecurityPolicy.m in Sources */,

@@ -10,6 +10,7 @@
 #import "JCSearchResultTableViewCell.h"
 #import "JCItemEntity.h"
 #import "UIImageView+AFNetworking.h"
+#import "DetailViewController.h"
 
 @interface SearchResultViewController () {
 	NSMutableArray *results;
@@ -105,9 +106,6 @@
 
 	cell.productImageView.image = placeholder;
 
-	cell.accessoryType = UITableViewCellAccessoryDetailButton;
-
-
 	__weak JCSearchResultTableViewCell *weakCell = cell;
 
 	if (itemEntity.urlThumbnailImage) {
@@ -122,14 +120,12 @@
 	}
 }
 
-/*
-   #pragma mark - Navigation
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+	JCItemEntity *item = [results objectAtIndex:indexPath.row];
 
-   // In a storyboard-based application, you will often want to do a little preparation before navigation
-   - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-   }
- */
+	DetailViewController *detailController = [[DetailViewController alloc] initWithModelId:item.id];
+
+	[self.navigationController pushViewController:detailController animated:YES];
+}
 
 @end
