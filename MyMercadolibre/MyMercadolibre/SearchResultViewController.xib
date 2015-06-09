@@ -15,12 +15,18 @@
             <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="bra-nR-wmm">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="bra-nR-wmm">
+                    <rect key="frame" x="10" y="10" width="580" height="580"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="0.1529411765" green="0.68235294120000001" blue="0.37647058820000001" alpha="0.64000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="bra-nR-wmm" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="10" id="A9N-39-viS"/>
+                <constraint firstAttribute="bottom" secondItem="bra-nR-wmm" secondAttribute="bottom" constant="10" id="Z3H-a9-gnk"/>
+                <constraint firstItem="bra-nR-wmm" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="aII-tY-Uel"/>
+                <constraint firstAttribute="trailing" secondItem="bra-nR-wmm" secondAttribute="trailing" constant="10" id="yxv-dk-p2O"/>
+            </constraints>
         </view>
     </objects>
 </document>

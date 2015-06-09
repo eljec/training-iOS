@@ -14,6 +14,7 @@
 
 static NSString *const kSearchURL = @"https://api.mercadolibre.com/sites/%@/search?q=%@&limit=50";
 static NSString *const kSiteshURL = @"https://api.mercadolibre.com/sites";
+static NSString *const kItemURL = @"https://api.mercadolibre.com/items/%@";
 
 
 - (void)getSites:(void (^) (NSMutableArray *))callBackBlock {
@@ -23,6 +24,8 @@ static NSString *const kSiteshURL = @"https://api.mercadolibre.com/sites";
 		NSURLResponse *response;
 		NSError *error;
 		NSMutableArray *sitesArray = [[NSMutableArray alloc] init];
+
+		NSLog(@"getSites: Url: %@", kSiteshURL);
 
 		NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
 
@@ -50,7 +53,7 @@ static NSString *const kSiteshURL = @"https://api.mercadolibre.com/sites";
 
 	NSString *stringUrl = [NSString stringWithFormat:kSearchURL, siteSelected, text];
 
-	NSLog(@"Url: %@", stringUrl);
+	NSLog(@"searchWith: Url: %@", stringUrl);
 	NSURL *url = [NSURL URLWithString:stringUrl];
 	NSURLRequest *request = [NSURLRequest requestWithURL:url];
 
@@ -79,6 +82,31 @@ static NSString *const kSiteshURL = @"https://api.mercadolibre.com/sites";
 	}];
 
 	[operation start];
+}
+
+- (void)getItemById:(NSString *)id callBackBlock:(void (^) (JCItemEntity *))callBackBlock {
+	dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+		NSString *stringUrl = [NSString stringWithFormat:kItemURL, id];
+		NSURL *url = [NSURL URLWithString:stringUrl];
+
+		NSLog(@"getItemById: Url: %@", stringUrl);
+
+		NSURLRequest *request = [NSURLRequest requestWithURL:url];
+		NSURLResponse *response;
+		NSError *error;
+
+		NSData *data = [NSURLConnection sendSynchronousRequest:request returningResponse:&response error:&error];
+
+		if (data.length > 0 && !error) {
+		    NSDictionary *res = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
+
+		    JCItemEntity *aux = [[JCItemEntity alloc] initWithDataResponse:res];
+
+		    dispatch_async(dispatch_get_main_queue(), ^{
+				callBackBlock(aux);
+			});
+		}
+	});
 }
 
 @end
