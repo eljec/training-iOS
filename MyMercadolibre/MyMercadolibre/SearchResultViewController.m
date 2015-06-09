@@ -24,7 +24,6 @@
 	self = [super initWithNibName:NSStringFromClass([self class])
 	                       bundle:[NSBundle mainBundle]];
 	if (self) {
-		//self.title = @"Results";
 		results = arrayItems;
 	}
 	return self;
@@ -105,6 +104,9 @@
 	cell.productPrice.text = priceString;
 
 	cell.productImageView.image = placeholder;
+
+	cell.accessoryType = UITableViewCellAccessoryDetailButton;
+
 
 	__weak JCSearchResultTableViewCell *weakCell = cell;
 

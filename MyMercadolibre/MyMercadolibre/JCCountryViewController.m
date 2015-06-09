@@ -19,6 +19,10 @@
 
 @implementation JCCountryViewController
 
+- (void)awakeFromNib {
+	self.title = NSLocalizedString(@"COUNTRY_SELECTION_TITLE", nil);
+}
+
 - (void)viewDidLoad {
 	[super viewDidLoad];
 

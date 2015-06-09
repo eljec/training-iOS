@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="resultCell" id="KGk-i7-Jjw" customClass="JCSearchResultTableViewCell">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="resultCell" id="KGk-i7-Jjw" customClass="JCSearchResultTableViewCell">
             <rect key="frame" x="0.0" y="0.0" width="320" height="60"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -22,13 +22,13 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xi8-Z3-HNG">
-                        <rect key="frame" x="270" y="38" width="29" height="15"/>
+                        <rect key="frame" x="250" y="38" width="29" height="15"/>
                         <fontDescription key="fontDescription" type="system" pointSize="12"/>
                         <color key="textColor" red="0.50196081399917603" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="10j-QW-Spj">
-                        <rect key="frame" x="76" y="24" width="234" height="12"/>
+                        <rect key="frame" x="76" y="24" width="201" height="12"/>
                         <fontDescription key="fontDescription" type="system" pointSize="10"/>
                         <color key="textColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
                         <nil key="highlightedColor"/>
@@ -41,7 +41,7 @@
                     <constraint firstItem="xi8-Z3-HNG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="30" id="OYh-aZ-bqG"/>
                     <constraint firstItem="ZXu-KM-Rzs" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Vue-2P-q6O"/>
                     <constraint firstItem="10j-QW-Spj" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="byr-7z-aDt"/>
-                    <constraint firstItem="xi8-Z3-HNG" firstAttribute="leading" secondItem="ZXu-KM-Rzs" secondAttribute="trailing" constant="220" id="uJx-dW-sCg"/>
+                    <constraint firstItem="xi8-Z3-HNG" firstAttribute="leading" secondItem="ZXu-KM-Rzs" secondAttribute="trailing" constant="200" id="uJx-dW-sCg"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

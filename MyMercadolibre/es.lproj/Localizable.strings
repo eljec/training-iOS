@@ -1,0 +1,19 @@
+/* 
+  Localizable.strings
+  MyMercadolibre
+
+  Created by Julio Castillo on 6/8/15.
+  Copyright (c) 2015 Julio Castillo. All rights reserved.
+*/
+
+
+"HINT_SEARCH_TEXT_VIEW" = "Texto...";
+"SEARCH_BUTTON_TEXT" = "BUSCAR";
+
+"ALERT_TILE_ERROR_NOT_COMPLETED_DATA" = "No todos los datos estan completos";
+"ALERT_MESSAGE_ERROR_NOT_COMPLETED_DATA" = "Por favor ingrese un texto a buscar";
+"ALERT_OK_BUTTON_TEXT" = "OK";
+
+"SEARCH_RESULT_TITLE" = "Resultados de '%@'";
+"COUNTRY_SELECTION_TITLE" = "Pais";
+"SEARCH_VIEW_TITLE" = "Buscar";

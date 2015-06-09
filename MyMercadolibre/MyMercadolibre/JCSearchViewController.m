@@ -36,6 +36,11 @@
 	progressView.delegate = self;
 	progressView.mode = MBProgressHUDModeIndeterminate;
 
+	// Set localized text
+
+	self.title = NSLocalizedString(@"SEARCH_VIEW_TITLE", nil);
+	[self.btnSearch setTitle:NSLocalizedString(@"SEARCH_BUTTON_TEXT", nil) forState:UIControlStateNormal];
+	[self.searchTextView setPlaceholder:NSLocalizedString(@"HINT_SEARCH_TEXT_VIEW", nill)];
 
 	// Set Toolbar
 
@@ -76,7 +81,7 @@
 	if ([searchText isEqual:@""]) {
 		// SHow erroe message
 
-		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Missing required data!" message:@"Please complete with all requiered information" delegate:self cancelButtonTitle:@"Ok" otherButtonTitles:nil];
+		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:NSLocalizedString(@"ALERT_TILE_ERROR_NOT_COMPLETED_DATA", nil) message:NSLocalizedString(@"ALERT_MESSAGE_ERROR_NOT_COMPLETED_DATA", nil)  delegate:self cancelButtonTitle:NSLocalizedString(@"ALERT_OK_BUTTON_TEXT", nil) otherButtonTitles:nil];
 		[alert show];
 	}
 	else {
@@ -98,7 +103,7 @@
 
 - (void)showResults:(NSMutableArray *)results {
 	SearchResultViewController *resultsViewController = [[SearchResultViewController alloc] initWithArrayItems:results];
-	resultsViewController.title = [NSString stringWithFormat:@"Result of '%@'", searchText];
+	resultsViewController.title = [NSString stringWithFormat:NSLocalizedString(@"SEARCH_RESULT_TITLE", nil), searchText];
 
 	[self.navigationController pushViewController:resultsViewController
 	                                     animated:YES];
