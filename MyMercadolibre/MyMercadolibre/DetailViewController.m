@@ -22,6 +22,7 @@
 
 @implementation DetailViewController
 
+
 - (id)initWithModelId:(NSString *)id {
 	self = [super initWithNibName:NSStringFromClass([self class])
 	                       bundle:[NSBundle mainBundle]];
@@ -40,13 +41,16 @@
 	self.progressView.mode = MBProgressHUDModeIndeterminate;
 
 	manager = [[RequestManager alloc] init];
+
+	self.arrayRequestUrl = [[NSMutableDictionary alloc] init];
+
 	// Get the object
 
 	__weak typeof(self) weakSelf = self;
 
 	// Show progress view
 
-	[self.progressView show:YES];
+	//[self.progressView show:YES];
 
 	[manager getItemById:idSelectedItem callBackBlock: ^(JCItemEntity *item) {
 	    [weakSelf populateView:item];
@@ -54,30 +58,55 @@
 }
 
 - (void)populateView:(JCItemEntity *)item {
-	UIImage *placeholder = [UIImage imageNamed:@"placeHolder"];
-
-	currentItem = item;
-
 	self.titleLabel.text = item.title;
 	self.priceLabel.text = [NSString localizedStringWithFormat:@"$ %.2ld", (long)item.price];
-	self.itemImageView.image = placeholder;
 
-	__weak typeof(self) weakSelf = self;
+	// Image
 
 	if (item.arrayPictures) {
-		NSString *urlPicture = [item.arrayPictures objectAtIndex:0];
+		self.pagerImages.contentSize = CGSizeMake(self.pagerImages.frame.size.width * item.arrayPictures.count, self.pagerImages.frame.size.height);
 
-		NSURL *url = [NSURL URLWithString:urlPicture];
+		UIImage *placeholder = [UIImage imageNamed:@"placeHolder"];
+		__weak typeof(self) weakSelf = self;
 
-		NSURLRequest *request = [NSURLRequest requestWithURL:url];
-		[self.itemImageView setImageWithURLRequest:request
-		                          placeholderImage:placeholder
-		                                   success: ^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
-		    weakSelf.itemImageView.image = image;
+		int i = 0;
 
-		    // Hide progress virew
-		    [weakSelf.progressView hide:YES];
-		} failure:nil];
+		for (NSString *urlPicture in item.arrayPictures) {
+			UIImageView *itemImage = [[UIImageView alloc] initWithImage:placeholder];
+			[itemImage setFrame:CGRectMake(0, 0, self.pagerImages.frame.size.width, self.pagerImages.frame.size.height)];
+
+			// Adding to the array request url
+
+			[self.arrayRequestUrl setObject:itemImage forKey:urlPicture];
+
+			// Load view in bg
+
+			NSURL *url = [NSURL URLWithString:urlPicture];
+
+			NSURLRequest *request = [NSURLRequest requestWithURL:url];
+			[itemImage setImageWithURLRequest:request
+			                 placeholderImage:placeholder
+			                          success: ^(NSURLRequest *request, NSHTTPURLResponse *response, UIImage *image) {
+			    NSString *requestPath = [[request URL] absoluteString];
+			    UIImageView *aux = [weakSelf.arrayRequestUrl objectForKey:requestPath];
+			    aux.image = image;
+			    [aux setNeedsDisplay];
+			} failure:nil];
+
+			// Create Panel
+
+			CGRect frame;
+			frame.origin.x = self.pagerImages.frame.size.width * i;
+			frame.origin.y = 0;
+			frame.size = self.pagerImages.frame.size;
+
+			UIView *subview = [[UIView alloc] initWithFrame:frame];
+			[subview addSubview:itemImage];
+
+			[self.pagerImages addSubview:subview];
+
+			i++;
+		}
 	}
 }
 

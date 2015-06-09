@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		143F54911B262D4600A1F900 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 143F54931B262D4600A1F900 /* Localizable.strings */; };
+		1441D94C1B2765BC0093B071 /* MMScrollPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 1441D9491B2765BC0093B071 /* MMScrollPage.m */; };
+		1441D94D1B2765BC0093B071 /* MMScrollPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 1441D94B1B2765BC0093B071 /* MMScrollPresenter.m */; };
 		147AE09B1B20E73800269A3E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 147AE09A1B20E73800269A3E /* main.m */; };
 		147AE09E1B20E73800269A3E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 147AE09D1B20E73800269A3E /* AppDelegate.m */; };
 		147AE0A41B20E73800269A3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 147AE0A21B20E73800269A3E /* Main.storyboard */; };
@@ -61,6 +63,10 @@
 		143F54901B262CB300A1F900 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		143F54921B262D4600A1F900 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		143F54941B262D8E00A1F900 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1441D9481B2765BC0093B071 /* MMScrollPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMScrollPage.h; sourceTree = "<group>"; };
+		1441D9491B2765BC0093B071 /* MMScrollPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMScrollPage.m; sourceTree = "<group>"; };
+		1441D94A1B2765BC0093B071 /* MMScrollPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMScrollPresenter.h; sourceTree = "<group>"; };
+		1441D94B1B2765BC0093B071 /* MMScrollPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMScrollPresenter.m; sourceTree = "<group>"; };
 		147AE0951B20E73800269A3E /* MyMercadolibre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMercadolibre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		147AE0991B20E73800269A3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		147AE09A1B20E73800269A3E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -151,6 +157,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1441D9471B2765A80093B071 /* MMScrollPresenter */ = {
+			isa = PBXGroup;
+			children = (
+				1441D9481B2765BC0093B071 /* MMScrollPage.h */,
+				1441D9491B2765BC0093B071 /* MMScrollPage.m */,
+				1441D94A1B2765BC0093B071 /* MMScrollPresenter.h */,
+				1441D94B1B2765BC0093B071 /* MMScrollPresenter.m */,
+			);
+			name = MMScrollPresenter;
+			sourceTree = "<group>";
+		};
 		147AE08C1B20E73800269A3E = {
 			isa = PBXGroup;
 			children = (
@@ -172,6 +189,7 @@
 		147AE0971B20E73800269A3E /* MyMercadolibre */ = {
 			isa = PBXGroup;
 			children = (
+				1441D9471B2765A80093B071 /* MMScrollPresenter */,
 				143F54931B262D4600A1F900 /* Localizable.strings */,
 				14979C1C1B21DD1E00714368 /* MBProgressHUD */,
 				14979C021B21DCED00714368 /* UIKit+AFNetworking */,
@@ -510,11 +528,13 @@
 				14979C171B21DCED00714368 /* UIButton+AFNetworking.m in Sources */,
 				14979C301B21F62C00714368 /* UserPreferencesManager.m in Sources */,
 				14979C181B21DCED00714368 /* UIImageView+AFNetworking.m in Sources */,
+				1441D94C1B2765BC0093B071 /* MMScrollPage.m in Sources */,
 				147AE09B1B20E73800269A3E /* main.m in Sources */,
 				14979BE21B21D93300714368 /* JCSearchResultTableViewCell.m in Sources */,
 				14979C161B21DCED00714368 /* UIAlertView+AFNetworking.m in Sources */,
 				14979C1B1B21DCED00714368 /* UIWebView+AFNetworking.m in Sources */,
 				14979C151B21DCED00714368 /* UIActivityIndicatorView+AFNetworking.m in Sources */,
+				1441D94D1B2765BC0093B071 /* MMScrollPresenter.m in Sources */,
 				14979BFA1B21DCE100714368 /* AFHTTPRequestOperationManager.m in Sources */,
 				148792D81B271C490018C395 /* DetailViewController.m in Sources */,
 				14979C281B21E08C00714368 /* RequestManager.m in Sources */,

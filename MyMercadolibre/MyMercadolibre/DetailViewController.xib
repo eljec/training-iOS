@@ -2,13 +2,11 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
-        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailViewController">
             <connections>
-                <outlet property="itemImageView" destination="SNg-GA-btb" id="dhA-rt-gh5"/>
+                <outlet property="pagerImages" destination="VIt-4x-s4n" id="Gbj-QN-CR9"/>
                 <outlet property="priceLabel" destination="Q1a-tx-0oA" id="EEa-ud-QW9"/>
                 <outlet property="titleLabel" destination="qS2-GW-jrW" id="vyD-HM-2aW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -36,26 +34,49 @@
                     <color key="textColor" red="0.50196081400000003" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SNg-GA-btb">
-                    <rect key="frame" x="50" y="181" width="500" height="294"/>
-                </imageView>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceHorizontal="YES" pagingEnabled="YES" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIt-4x-s4n">
+                    <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </scrollView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
             <constraints>
                 <constraint firstItem="A83-qd-zls" firstAttribute="trailing" secondItem="qS2-GW-jrW" secondAttribute="trailing" id="4P4-Ps-vZ8"/>
                 <constraint firstAttribute="bottom" secondItem="A83-qd-zls" secondAttribute="bottom" constant="100" id="BsR-P5-fFV"/>
-                <constraint firstItem="SNg-GA-btb" firstAttribute="top" secondItem="qS2-GW-jrW" secondAttribute="bottomMargin" constant="115" id="C5W-AX-epg"/>
                 <constraint firstAttribute="trailing" secondItem="qS2-GW-jrW" secondAttribute="trailing" constant="8" id="F4h-lN-ZtS"/>
                 <constraint firstItem="Q1a-tx-0oA" firstAttribute="centerX" secondItem="A83-qd-zls" secondAttribute="centerX" id="MEk-N0-bce"/>
-                <constraint firstItem="Q1a-tx-0oA" firstAttribute="top" secondItem="SNg-GA-btb" secondAttribute="bottom" constant="75" id="Piu-no-xPA"/>
+                <constraint firstAttribute="trailing" secondItem="VIt-4x-s4n" secondAttribute="trailing" constant="20" id="Nfw-1M-YOH"/>
                 <constraint firstItem="qS2-GW-jrW" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="80" id="UuL-gY-JHW"/>
                 <constraint firstItem="qS2-GW-jrW" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="8" id="YmO-Vv-QcC"/>
                 <constraint firstItem="Q1a-tx-0oA" firstAttribute="top" secondItem="A83-qd-zls" secondAttribute="bottom" constant="20" id="fUL-h5-Jbd"/>
                 <constraint firstItem="A83-qd-zls" firstAttribute="leading" secondItem="qS2-GW-jrW" secondAttribute="leading" id="hkL-E3-OgV"/>
                 <constraint firstItem="A83-qd-zls" firstAttribute="top" secondItem="qS2-GW-jrW" secondAttribute="bottom" constant="45" id="o7V-mz-Lrh"/>
-                <constraint firstItem="SNg-GA-btb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="w7C-mW-gas"/>
-                <constraint firstAttribute="trailing" secondItem="SNg-GA-btb" secondAttribute="trailing" constant="20" id="ynY-AJ-PZs"/>
+                <constraint firstItem="VIt-4x-s4n" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="sdV-gd-NFc"/>
+                <constraint firstItem="VIt-4x-s4n" firstAttribute="top" secondItem="qS2-GW-jrW" secondAttribute="bottom" constant="76" id="uGh-hK-BT2"/>
+                <constraint firstItem="Q1a-tx-0oA" firstAttribute="top" secondItem="VIt-4x-s4n" secondAttribute="bottom" constant="50" id="xTa-Hp-vqD"/>
             </constraints>
+            <variation key="default">
+                <mask key="subviews">
+                    <exclude reference="VIt-4x-s4n"/>
+                </mask>
+                <mask key="constraints">
+                    <exclude reference="Nfw-1M-YOH"/>
+                    <exclude reference="sdV-gd-NFc"/>
+                    <exclude reference="uGh-hK-BT2"/>
+                    <exclude reference="xTa-Hp-vqD"/>
+                </mask>
+            </variation>
+            <variation key="widthClass=compact">
+                <mask key="subviews">
+                    <include reference="VIt-4x-s4n"/>
+                </mask>
+                <mask key="constraints">
+                    <include reference="Nfw-1M-YOH"/>
+                    <include reference="sdV-gd-NFc"/>
+                    <include reference="uGh-hK-BT2"/>
+                    <include reference="xTa-Hp-vqD"/>
+                </mask>
+            </variation>
             <point key="canvasLocation" x="404" y="354"/>
         </view>
     </objects>
