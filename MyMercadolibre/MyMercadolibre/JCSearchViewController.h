@@ -13,5 +13,6 @@
 
 - (IBAction)search:(id)sender;
 @property (strong, nonatomic) IBOutlet UITextField *searchTextView;
+@property (strong, nonatomic) IBOutlet UIButton *btnSearch;
 
 @end

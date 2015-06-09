@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		143F54911B262D4600A1F900 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 143F54931B262D4600A1F900 /* Localizable.strings */; };
 		147AE09B1B20E73800269A3E /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 147AE09A1B20E73800269A3E /* main.m */; };
 		147AE09E1B20E73800269A3E /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 147AE09D1B20E73800269A3E /* AppDelegate.m */; };
 		147AE0A41B20E73800269A3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 147AE0A21B20E73800269A3E /* Main.storyboard */; };
@@ -54,6 +55,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		143F548F1B262CB300A1F900 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Main.strings; sourceTree = "<group>"; };
+		143F54901B262CB300A1F900 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		143F54921B262D4600A1F900 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		143F54941B262D8E00A1F900 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
 		147AE0951B20E73800269A3E /* MyMercadolibre.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyMercadolibre.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		147AE0991B20E73800269A3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		147AE09A1B20E73800269A3E /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -162,6 +167,7 @@
 		147AE0971B20E73800269A3E /* MyMercadolibre */ = {
 			isa = PBXGroup;
 			children = (
+				143F54931B262D4600A1F900 /* Localizable.strings */,
 				14979C1C1B21DD1E00714368 /* MBProgressHUD */,
 				14979C021B21DCED00714368 /* UIKit+AFNetworking */,
 				14979BE51B21DCE100714368 /* AFNetworking */,
@@ -429,6 +435,7 @@
 			knownRegions = (
 				en,
 				Base,
+				es,
 			);
 			mainGroup = 147AE08C1B20E73800269A3E;
 			productRefGroup = 147AE0961B20E73800269A3E /* Products */;
@@ -447,6 +454,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				147AE0A41B20E73800269A3E /* Main.storyboard in Resources */,
+				143F54911B262D4600A1F900 /* Localizable.strings in Resources */,
 				147AE0A91B20E73800269A3E /* LaunchScreen.xib in Resources */,
 				14979BE31B21D93300714368 /* JCSearchResultTableViewCell.xib in Resources */,
 				147AE0A61B20E73800269A3E /* Images.xcassets in Resources */,
@@ -518,10 +526,21 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		143F54931B262D4600A1F900 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				143F54921B262D4600A1F900 /* en */,
+				143F54941B262D8E00A1F900 /* es */,
+			);
+			name = Localizable.strings;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		147AE0A21B20E73800269A3E /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				147AE0A31B20E73800269A3E /* Base */,
+				143F548F1B262CB300A1F900 /* es */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -530,6 +549,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				147AE0A81B20E73800269A3E /* Base */,
+				143F54901B262CB300A1F900 /* es */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";

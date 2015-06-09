@@ -61,6 +61,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Search" id="g1B-ER-00H"/>
                     <connections>
+                        <outlet property="btnSearch" destination="YgJ-WX-hP6" id="IMc-Ac-lWc"/>
                         <outlet property="searchTextView" destination="dbz-Ch-1NR" id="hEf-F4-ykI"/>
                     </connections>
                 </viewController>

@@ -1,0 +1,15 @@
+
+/* Class = "UITabBarItem"; title = "Country"; ObjectID = "FEi-F5-Kmt"; */
+"FEi-F5-Kmt.title" = "Country";
+
+/* Class = "UIButton"; normalTitle = "Go"; ObjectID = "YgJ-WX-hP6"; */
+"YgJ-WX-hP6.normalTitle" = "Go";
+
+/* Class = "UITextField"; placeholder = "Enter some text"; ObjectID = "dbz-Ch-1NR"; */
+"dbz-Ch-1NR.placeholder" = "Enter some text";
+
+/* Class = "UINavigationItem"; title = "Search"; ObjectID = "g1B-ER-00H"; */
+"g1B-ER-00H.title" = "Search";
+
+/* Class = "UINavigationItem"; title = "Select a Country"; ObjectID = "lce-wo-9c8"; */
+"lce-wo-9c8.title" = "Select a Country";
